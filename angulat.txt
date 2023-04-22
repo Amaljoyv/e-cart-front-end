@@ -1,0 +1,58 @@
+
+                angular - front end development technology - web app design
+
+        Basic Comands
+
+            1. To installl angular CLI: npm i -g @angular/CLI
+            2. To check angular version: ng v
+            3. To create angular project: ng new project-name
+            4. To run angular project: ng serve
+            5. to create a component: ng g c component-name
+            6. To create  angular service : ng g s service-folder/serve-name http://localhost:4200/
+            7. To create  angular pipes : ng g p pipe-folder/pipe-name
+            8. To geenrate lazy loaded module : ng g m module-name --route products --module root-module
+
+        Basic Concepts
+
+            1. Module : Import 3rd party libraries ,root module:AppModule
+            2. Component : we will get a html,style sheet,ts file, root component:AppComponent
+            3. Decorators : to specify meta data
+            4. Data Binding : Sharing data within a component
+                4.1  One way Binding : Data sharing will be only at one direction
+                    4.1.1  ts (component) file to html file
+                            4.1.1.1  string interpolation :  {{variable-name}}
+                            4.1.1.2  property binding : [attribute-name]="property name"
+                    4.1.2  html (view) to ts (component) file
+                            4.1.2.1 Event Binding : (event-name)="function call"
+                            4.1.2.1 Event Binding with $event argument : (event-name)="function call($event)"
+                            4.1.2.3 Using Template reference variable
+                4.2   Two Binding : Data sharing will be at two direction
+                    4.2.1 Binding using ngModel : [(ngModel)]="variable-name"
+                        - import FormsModule inside your project
+            5. set up path for a component - AppRoutingModule
+                path setup inside Routs Array :  {path:"path",component:component-name} 
+            6. To redirect from one ts to another , we need to navigateByURL() -Router class
+            7. Dependency injection : To share data between dependent classes , in constructor
+                access-specifier variable-name:dependent-class-name                   
+            8. Angular Services : To share common logic with all component
+            9. To call HTTP Methods
+                - import HttpClientModule inside module file
+                - use HttpClient class to get HTTP Methods
+            10. Asynchronous Function - RxJS
+                - Observable
+                    - subscribe() - resolved
+            11. Directives - To manipulate development
+                - component Directives
+                - Structural Directive : Add / Remove an html elements
+                    - *ngFor : *ngFor="let variable-name of array-name"
+            12. ActivatedRoute - Provides access to informaiton about a route associated with a component
+		13. pipe : accept an input value and return a transformed valur
+			- syntax: value_expression | pipe-operator [ : format ]
+        14
+
+        15. parent Child Communication
+            - parent to child : input Decorator
+            - child to parent : output decorator
+        16. lazy loading : 
+
+

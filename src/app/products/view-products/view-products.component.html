@@ -1,0 +1,32 @@
+<!-- Product section-->
+<section class="py-5 ">
+  <div class="container  px-4 px-lg-5 ">
+    <div class="row view gx-4 gx-lg-5 align-items-center">
+      <div class="col-md-4">
+        <img height="300px"
+          class="card-img-top mb-5 mb-md-0"
+          [src]="product.image"
+          alt="product.image"
+        />
+      </div>
+      <div class="col-md-6 ms-auto">
+        <div class="small mb-1">product id : {{product._id}}</div>
+        <h1 class="display-5 fw-bolder">{{product.title}}</h1>
+        <div class="fs-5 mb-3">
+          <span class="text-decoration-line-through">${{product.price+5}}</span>
+          <span>${{product.price}}</span>
+        </div>
+        <p class="lead fw-bold"><span>description : </span>
+          {{product.description}}
+        </p>
+        <div class="d-flex justify-content-between">
+          <button (click)="addToWishlist(product)" class="btn btn-danger me-3"><i class="fa-solid fa-heart-circle-plus me-1"></i>Add to wishlist</button>
+          <button (click)="addtocart(product)" class="btn btn-success flex-shrink-0" type="button">
+            <i class="fa-solid fa-cart-plus me-1"></i>
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
